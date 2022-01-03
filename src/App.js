@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import factoryWithThrowingShims from "prop-types/factoryWithThrowingShims";
+import Movie from "./Movie";
 // import styles from "./App.module.css";
 
 class App extends React.Component {
@@ -13,7 +13,9 @@ class App extends React.Component {
       data: {
         data: { movies },
       },
-    } = await axios.get("https://yts.mx/api/v2/list_movies.json");
+    } = await axios.get(
+      "https://yts.mx/api/v2/list_movies.json?sort_by=rating"
+    );
     // console.log(movies);
     this.setState({ movies, isLoading: false });
   };
@@ -22,8 +24,25 @@ class App extends React.Component {
     this.getMovies();
   }
   render() {
-    const { isLoading } = this.state;
-    return <div>{isLoading ? "Loading..." : "TODO: 영화 데이터 출력"}</div>;
+    const { isLoading, movies } = this.state;
+    return (
+      <div>
+        {isLoading
+          ? "Loading..."
+          : movies.map((movie) => {
+              return (
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  year={movie.year}
+                  title={movie.title}
+                  summary={movie.summary}
+                  poster={movie.medium_cover_image}
+                />
+              );
+            })}
+      </div>
+    );
   }
 }
 
