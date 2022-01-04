@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 import Movie from "./Movie";
-import styles from "./App.module.css";
+import "./App.module.css";
+// import styles from "./App.module.css"
 
 class App extends React.Component {
   state = {

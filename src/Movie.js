@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Movie.module.css";
+import "./Movie.module.css";
+// import styles from "./Movie.module.css";
 
 function Movie({ title, year, summary, poster, genres }) {
   return (
@@ -8,17 +9,17 @@ function Movie({ title, year, summary, poster, genres }) {
       <img src={poster} alt={title} title={title} />
       <div className="movie__data">
         <h3 className="movie__title">{title}</h3>
-        <h5 className="movie_year">{year}</h5>
-        <p className="movie_summary">{summary}</p>
-        <ul className="movie_genres">
+        <h5 className="movie__year">{year}</h5>
+        <ul className="movie__genres">
           {genres.map((genre, index) => {
             return (
-              <li key={index} className="movie_genre">
+              <li key={index} className="genres__genre">
                 {genre}
               </li>
             );
           })}
         </ul>
+        <p className="movie__summary">{summary.slice(0, 180)}...</p>
       </div>
     </div>
   );
