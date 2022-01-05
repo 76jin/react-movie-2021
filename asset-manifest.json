@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-movie-2021/static/css/main.0697bb19.css",
+    "main.js": "/react-movie-2021/static/js/main.21a85d42.js",
+    "index.html": "/react-movie-2021/index.html",
+    "main.0697bb19.css.map": "/react-movie-2021/static/css/main.0697bb19.css.map",
+    "main.21a85d42.js.map": "/react-movie-2021/static/js/main.21a85d42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0697bb19.css",
+    "static/js/main.21a85d42.js"
+  ]
+}
