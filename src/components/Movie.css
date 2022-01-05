@@ -33,10 +33,6 @@
   font-weight: 300;
 }
 
-.movie .movie__year {
-  color: red;
-}
-
 .movie .movie__title {
   margin-bottom: 5px;
   font-size: 24px;

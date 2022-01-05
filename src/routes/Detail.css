@@ -1,0 +1,8 @@
+.detail {
+  position: fixed;
+  left: 100px;
+}
+
+.detail img {
+  top: 0px;
+}
